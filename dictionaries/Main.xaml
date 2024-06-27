@@ -83,11 +83,7 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,1662" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="BirthDates">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:String)" ExpressionText="New Dictionary(of string, string)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Default="[New Dictionary(of string, string)]" Name="BirthDates" />
       <Variable x:TypeArguments="s:DateTime" Name="DateCurrentPerson" />
       <Variable x:TypeArguments="s:DateTime" Name="CurrentYearAnniversary" />
     </Sequence.Variables>
@@ -114,7 +110,7 @@
     </Assign>
     <Assign DisplayName="Assign Jenny Colter Bd" sap:VirtualizedContainerService.HintSize="546,114" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[BirthDates("Jenny Colter")]</OutArgument>
+        <OutArgument x:TypeArguments="x:String">[BirthDates("Amy Colter")]</OutArgument>
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">06/15/2005</InArgument>
